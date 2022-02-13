@@ -4,7 +4,8 @@ public class Main {
         StringBuilder out = new StringBuilder();
         Json json = new Json();
 
-        new JsonWriter().writeJson(out, json, jsonOptions ->
+        JsonWriter jsonWriter = new JsonWriter(new MessagePackFormat(MessagePackFormat.Endianness.BIG_ENDIAN));
+        jsonWriter.writeJson(out, json, jsonOptions ->
                 jsonOptions
                         .withIndentation()
                         .withoutArrayIndentation()
