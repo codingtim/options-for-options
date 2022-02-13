@@ -1,14 +1,13 @@
-import java.util.function.Consumer;
+import java.util.function.Function;
 
 public final class JsonWriter {
 
     public void writeJson(
             Appendable out,
             Json json,
-            Consumer<JsonOptions> jsonOptionsConsumer
+            Function<JsonOptions, JsonOptions> jsonOptionsConsumer
     ) {
-        JsonOptions jsonOptions = new JsonOptions();
-        jsonOptionsConsumer.accept(jsonOptions);
+        JsonOptions jsonOptions = jsonOptionsConsumer.apply(new JsonOptions());
         //
     }
 }
