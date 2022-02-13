@@ -8,6 +8,7 @@ public class Main {
                 jsonOptions
                         .withIndentation()
                         .withoutArrayIndentation()
+                        .withCopyright("(c) 2022")
         );
     }
 }
