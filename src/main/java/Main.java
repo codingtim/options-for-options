@@ -4,6 +4,6 @@ public class Main {
         StringBuilder out = new StringBuilder();
         Json json = new Json();
 
-        new JsonWriter().writeJson(out, json);
+        new JsonWriter().writeJson(out, json, JsonOptions::indent);
     }
 }
