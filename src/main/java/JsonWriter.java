@@ -7,7 +7,7 @@ public final class JsonWriter {
             Json json,
             Function<JsonOptions, JsonOptions> jsonOptionsConsumer
     ) {
-        JsonOptions jsonOptions = jsonOptionsConsumer.apply(new JsonOptions());
+        JsonOptions jsonOptions = jsonOptionsConsumer.apply(JsonOptions.defaultOptions());
         //
     }
 }
